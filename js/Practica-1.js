@@ -2,7 +2,7 @@
 //html base
 document.write("<div class='contenedor'>");
 document.write("<h1>JavaScript - Udemy</h1><hr><hr class='hr2'>")
-document.write("</div>");
+
 
 /*
 1- pedir 6 muneros por pantalla - para array
@@ -12,19 +12,48 @@ document.write("</div>");
 6- buscar valor introducido por el usuario. mostrar si esta y el indice.
 */
 
+/* Mostrar en pantalla */
+// Texto, parametro para agregar textos
+function mostrarArray(elementos, texto = ""){
+    document.write(`<h2>Contenido del Array ${texto}</h2>`);
+
+    document.write("<ul>");
+    numeros.forEach((elemento, i) =>{
+        document.write(`<li>${elemento}</li>`);
+    });
+    document.write("</ul>");
+}
 /* Array */
 
-let numeros = new Array(6);
+    document.write("<div class='array'>");
+    
+    let numeros = [];
 
-for (let i = 0; i < numeros.length; i++) {
-    numeros[i]  = parseInt(prompt("Introduce un numero: ", 0));  
-}
-/* Mostrar en pantalla */
+    for (let i = 0; i <= 5; i++) {
+            numeros.push(parseInt(prompt(`Introduce un numero: `,0))); 
+    }
+        
 
-document.write("<h2>Contenido del Array</h2>");
+    document.write("</div>");
 
-numeros.forEach((numero, i) =>{
-    document.write(`<strong> ${numero} </strong><hr>`);
-});
 /* Mostrar en consola*/ 
 console.log(numeros);
+/* llamar funcion */
+mostrarArray(numeros);
+console.log(numeros);
+
+/* numeros ordenados */
+
+//numeros.sort(function(a,b){return a - b;});
+
+numeros.sort((a,b) => a-b); /* ES6 */
+mostrarArray(numeros, 'Ordenado');
+
+/* array invertido usando reverse */
+numeros.reverse();
+mostrarArray(numeros, 'Revertidos');
+
+/* contar elementos */
+
+document.write(`<h2>Tamaño del array ${numeros.length}</h2>`);
+document.write("</div>");
