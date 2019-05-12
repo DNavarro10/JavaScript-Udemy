@@ -18,11 +18,12 @@
         </div>
         <div class="formulario">
             <div class="form">
-                <form method="POST" id="formulario">
+                <form action="#" onsubmit="return false" method="POST" id="formulario">
                    <h2>Formulario</h2>
-                   <p type="Nombre:"><input type="text" id="nombre" placeholder="Escribe tu nombre.."></input></p>
-                   <p type="Apellido:"><input type="text" id="apellido" placeholder="Escribe tu apellido.."></input></p>
-                   <p type="Edad:"><input type="number" id="edad" placeholder="Cual es tu edad?"></input></p>
+                   <p type="Nombre:"><input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre.."/></p>
+                   <p type="Apellido:"><input type="text" name="apellido" id="apellido" placeholder="Escribe tu apellido.."/></p>
+                   <p type="Edad:"><input type="number" name="edad" id="edad" placeholder="Cual es tu edad?"/></p>
+                   
                    <button type="submit" value="Enviar" id="submit">Enviar Datos</button>
         
                 </form>
