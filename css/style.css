@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 
 }
 /*
@@ -9,11 +10,14 @@ font-family: 'Oswald', sans-serif;
 */
 
 .contenedor{
-    background: #00d2ff;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #928DAB, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #928DAB, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 100%;
+    background: #59ABE3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #928dab, #59ABE3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #928DAB, #59ABE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
 }
 
 hr{
@@ -28,22 +32,79 @@ hr{
 }
 h1{
     font-family: 'Oswald', sans-serif;
-    padding: 20px 0px 10px 0;
+    padding: 10px 0px 10px 0;
     color: aliceblue;
     text-shadow: 5px 5px 10px #000;
 }
 h2{
-    font-family: 'Oswald', sans-serif;
-    color: aliceblue;
-    text-shadow: 5px 5px 10px #000;
-    font-size: 1.2em;
-    margin-bottom: 2px;
-    margin-top: 2px;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    width: 180px;
+    color: #78788c;
+    border-bottom: 3px solid #78788c
 }
 
-li{
-    font-family: 'Oswald', sans-serif;
-    color: aliceblue;
-    text-shadow: 1px 1px 2px #000;
-    font-size: 1.2em;
+.formulario{
+    width: 340px;
+    height: 400px;
+    background: #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(40vh - 220px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    position: relative
 }
+
+p:before {
+    content: attr(type);
+    display: block;
+    float: left;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: #5a5a5a
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    transition: all .3s;
+    border-bottom: 2px solid #bebed2;
+    text-align: left;
+}
+
+input:focus{
+    border-bottom:2px solid #78788c
+}
+.form{
+    
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #78788c;
+    background: 0;
+    color: #5a5a6e;
+    cursor: pointer;
+    transition: all .3s
+}
+button:hover {
+    background: #78788c;
+    color: #fff
+}
+
+
